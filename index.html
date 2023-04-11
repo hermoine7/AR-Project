@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  <title>Marker based AR Portfolio</title>
+
+  <!-- Import A-Frame and then AR.js -->
+  <script src="https://aframe.io/releases/1.0.1/aframe.min.js"></script>
+  <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+
+  
+</head>
+
+<body style="margin : 0px; overflow: hidden;">
+
+  <!-- A-frame scene -->
+  <a-scene 
+  id="main-scene"
+  vr-mode-ui="enabled: false;"
+  embedded arjs="sourceType: webcam; debugUIEnabled: false; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;"
+  >
+  <a-assets>
+    <img id="card1" src="./Screenshot 2023-04-11 at 10.43.35 AM.png"></img>
+  </a-assets>
+
+    <a-marker-camera type="pattern" url="./pattern-download.patt">
+      <a-plane src="#card1" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0"></a-plane>
+    </a-marker-camera>
+  </a-scene>
+ 
+
+ 
+</body>
+
+</html>
